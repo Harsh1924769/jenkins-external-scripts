@@ -17,6 +17,12 @@ pipeline{
 			steps{ 
 				echo 'Both scripts executed successfully'
 			}
+		}
+		stage('Save Output'){
+			steps{
+				sh 'python3 hello.py > python_output.txt'
+				sh 'cat python_output.txt'
+			}
 		}	
 	}  	
 }
