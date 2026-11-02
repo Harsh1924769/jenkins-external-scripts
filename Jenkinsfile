@@ -22,8 +22,10 @@ pipeline{
 			steps{
 				sh 'python3 hello.py > python_output.txt'
 				sh 'cat python_output.txt'
+				sh 'date > date.txt'
+				sh 'cat date.txt'
 			}
-		}	
+		}
 	}  	
 }
 
